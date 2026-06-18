@@ -9,14 +9,14 @@ body {
   margin: 0;
   font-family: "Georgia", serif;
 
-  /* 💜 LIGHT + DARK PURPLE BACKGROUND */
+  /* 💜 SAME BACKGROUND (NO CHANGE) */
   background: linear-gradient(135deg, #e6ccff, #7b2cbf, #3c096c);
 
   text-align: center;
   overflow-x: hidden;
 }
 
-/* WATERMARK */
+/* WATERMARK (UNCHANGED) */
 body::before {
   content: "";
   position: fixed;
@@ -40,26 +40,27 @@ body::before {
   padding: 30px 10px;
 }
 
-.welcome {
-  font-size: 42px;
-  font-weight: bold;
+/* SMALL LINES */
+.line {
   color: #ffffff;
+  font-size: 20px;
+  margin: 5px 0;
 }
 
-/* TITLE BOX */
-.title-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
+/* MAIN TITLE (VERY BIG + DARK PURPLE) */
+.main-title {
+  font-size: 44px;
+  font-weight: bold;
+  color: #2d0057; /* dark purple */
+  margin: 15px 0;
 }
 
-/* TITLE STYLE */
-.title {
+/* SUB TITLE */
+.sub-title {
   font-size: 26px;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
+  margin-top: 10px;
 }
 
 /* CARD */
@@ -71,22 +72,6 @@ body::before {
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-
-/* BUTTON */
-button {
-  padding: 12px 20px;
-  background: #5a189a;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #3c096c;
-  transform: scale(1.05);
-}
 </style>
 </head>
 
@@ -95,18 +80,17 @@ button:hover {
 <!-- HEADER -->
 <div class="header">
 
-  <div class="welcome">
-    Welcome to Gates Institute of Technology (Gooty)
-  </div>
+  <!-- LINE 1 -->
+  <div class="line">Welcome</div>
 
-  <!-- TWO LINE HEADING -->
-  <div class="title-box">
+  <!-- LINE 2 -->
+  <div class="line">Gates Institute of Technology (Gooty)</div>
 
-    <div class="title">Health & Hygiene</div>
+  <!-- MAIN CSP TITLE -->
+  <div class="main-title">CSP Project of Health and Hygiene</div>
 
-    <div class="title">Sanitization & Hygiene Education</div>
-
-  </div>
+  <!-- SUB TITLE -->
+  <div class="sub-title">Sanitization & Hygiene Education</div>
 
 </div>
 
