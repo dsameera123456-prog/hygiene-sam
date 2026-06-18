@@ -7,42 +7,57 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Georgia", serif;
   background: linear-gradient(135deg, #00c6ff, #38ef7d, #ffffff);
   text-align: center;
   overflow-x: hidden;
 }
 
-/* WATERMARK BACKGROUND */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    url("https://cdn-icons-png.flaticon.com/512/2966/2966488.png"),
-    url("https://cdn-icons-png.flaticon.com/512/3082/3082011.png");
-
-  background-repeat: no-repeat;
-  background-position: left 15% top 25%, right 15% bottom 25%;
-  background-size: 220px, 220px;
-  opacity: 0.08;
-  z-index: -1;
+/* HEADER AREA */
+.header {
+  padding: 30px 10px;
 }
 
-/* HEADER */
-h1 {
+.welcome {
+  font-size: 42px;
+  font-weight: bold;
+  color: #1b4d89; /* blue formal */
+  margin-bottom: 10px;
+}
+
+.subline {
+  font-size: 20px;
+  color: #2e7d32;
+  letter-spacing: 1px;
+}
+
+/* 3 MAIN TITLES SAME SIZE DIFFERENT COLORS */
+.title-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
   margin-top: 20px;
-  color: #003366;
 }
 
-h2, h3 {
-  color: #004d40;
+.title {
+  font-size: 26px;
+  font-weight: bold;
 }
 
-/* CARD DESIGN */
+.health {
+  color: #1565c0; /* blue */
+}
+
+.hygiene {
+  color: #2e7d32; /* green */
+}
+
+.sanitization {
+  color: #ef6c00; /* orange */
+}
+
+/* CARD */
 .card {
   background: rgba(255,255,255,0.92);
   width: 80%;
@@ -68,7 +83,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* INPUT */
 input, textarea {
   width: 80%;
   padding: 10px;
@@ -76,143 +90,32 @@ input, textarea {
   border-radius: 8px;
   border: 1px solid gray;
 }
-
-/* LOGIN BOX */
-#loginPage {
-  margin-top: 120px;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- LOGIN PAGE -->
-<div id="loginPage">
-  <h2>Admin / User Login</h2>
-  <input placeholder="Email (optional)">
-  <input type="password" placeholder="Password (optional)">
-  <br>
-  <button onclick="login()">Login</button>
+<!-- HEADER -->
+<div class="header">
+  <div class="welcome">Welcome to Gates Institute of Technology (Gooty)</div>
+
+  <div class="subline">CSP Project – Community Service Program</div>
+
+  <div class="title-box">
+    <div class="title health">Health</div>
+    <div class="title hygiene">Hygiene</div>
+    <div class="title sanitization">Sanitization</div>
+  </div>
 </div>
 
-<!-- MAIN PAGE -->
-<div id="mainPage" style="display:none;">
-
-<h1>Welcome to Gates Institute CSP Project</h1>
-<h2>Health & Hygiene</h2>
-<h3>Sanitization & Hygiene Education</h3>
-
+<!-- MAIN CONTENT START -->
 <div class="card">
+  <h3>Hygiene Connect & Sanitization Care</h3>
   <p>
-    Hygiene Connect & Sanitization Care is a community service project
-    that spreads awareness about cleanliness, health, and hygiene habits.
+    Community project focusing on awareness of cleanliness, hygiene habits
+    and disease prevention in rural and urban areas.
   </p>
 </div>
-
-<div class="card">
-  <h3>Awareness & Guidelines</h3>
-  <p>Wash hands regularly, use sanitizer, wear gloves, and stay clean.</p>
-</div>
-
-<div class="card">
-  <h3>Hygiene Blocks</h3>
-  <button onclick="showTip('hand')">🧼 Hand Washing</button>
-  <button onclick="showTip('body')">🚿 Body Care</button>
-  <button onclick="showTip('personal')">🧴 Personal Hygiene</button>
-  <p id="tip"></p>
-</div>
-
-<div class="card">
-  <h3>Complaint Form</h3>
-  <input id="name" placeholder="Name">
-  <input id="phone" placeholder="Phone">
-  <input id="location" placeholder="Location">
-  <textarea id="desc" placeholder="Description"></textarea>
-  <br>
-  <button onclick="submitComplaint()">Submit</button>
-</div>
-
-<div class="card">
-  <h3>Dashboard</h3>
-  <p>User Count: <span id="count"></span></p>
-  <button onclick="showComplaints()">View Complaints</button>
-  <div id="dashboard"></div>
-</div>
-
-<div class="card">
-  <h3>Feedback</h3>
-  <textarea id="feedback"></textarea>
-  <br>
-  <button onclick="sendFeedback()">Send</button>
-</div>
-
-<div class="card">
-  <h3>Language</h3>
-  <button onclick="lang('en')">English</button>
-  <button onclick="lang('te')">Telugu</button>
-  <button onclick="lang('hi')">Hindi</button>
-  <p id="text"></p>
-</div>
-
-</div>
-
-<script>
-let users = localStorage.getItem("users") || 0;
-document.getElementById("count").innerText = users;
-
-function login() {
-  users++;
-  localStorage.setItem("users", users);
-
-  document.getElementById("loginPage").style.display = "none";
-  document.getElementById("mainPage").style.display = "block";
-}
-
-function showTip(type) {
-  let text = "";
-  if(type === "hand") text = "Wash hands for 20 seconds with soap.";
-  if(type === "body") text = "Take bath daily and wear clean clothes.";
-  if(type === "personal") text = "Use clean personal items daily.";
-
-  document.getElementById("tip").innerText = text;
-}
-
-function submitComplaint() {
-  let data = {
-    name: name.value,
-    phone: phone.value,
-    location: location.value,
-    desc: desc.value
-  };
-
-  let list = JSON.parse(localStorage.getItem("complaints") || "[]");
-  list.push(data);
-  localStorage.setItem("complaints", JSON.stringify(list));
-
-  alert("Complaint Submitted!");
-}
-
-function showComplaints() {
-  let list = JSON.parse(localStorage.getItem("complaints") || "[]");
-  document.getElementById("dashboard").innerHTML =
-    "<pre>" + JSON.stringify(list, null, 2) + "</pre>";
-}
-
-function sendFeedback() {
-  let fb = feedback.value;
-  let list = JSON.parse(localStorage.getItem("feedback") || "[]");
-  list.push(fb);
-  localStorage.setItem("feedback", JSON.stringify(list));
-  alert("Thanks for feedback!");
-}
-
-function lang(l) {
-  if(l === "en") text.innerText = "Maintain cleanliness and hygiene.";
-  if(l === "te") text.innerText = "శుభ్రత పాటించండి.";
-  if(l === "hi") text.innerText = "स्वच्छता बनाए रखें।";
-}
-</script>
 
 </body>
 </html>
