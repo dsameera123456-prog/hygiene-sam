@@ -13,6 +13,25 @@ body {
   overflow-x: hidden;
 }
 
+/* WATERMARK */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    url("https://cdn-icons-png.flaticon.com/512/2966/2966488.png"),
+    url("https://cdn-icons-png.flaticon.com/512/3082/3082011.png");
+
+  background-repeat: no-repeat;
+  background-position: left 15% top 25%, right 15% bottom 25%;
+  background-size: 220px, 220px;
+  opacity: 0.08;
+  z-index: -1;
+}
+
 /* HEADER */
 .header {
   padding: 30px 10px;
@@ -47,7 +66,7 @@ body {
 .hygiene { color: #2e7d32; }
 .sanitization { color: #ef6c00; }
 
-/* CARD STYLE */
+/* CARD */
 .card {
   background: rgba(255,255,255,0.92);
   width: 80%;
@@ -77,16 +96,26 @@ button:hover {
 
 <body>
 
-<!-- HEADER SECTION -->
+<!-- HEADER -->
 <div class="header">
-  <div class="welcome">Welcome to Gates Institute of Technology (Gooty)</div>
-  <div class="subline">CSP Project – Community Service Program</div>
 
-  <div class="title-box">
-    <div class="title health">Health</div>
-    <div class="title hygiene">Hygiene</div>
-    <div class="title sanitization">Sanitization</div>
+  <div class="welcome">
+    Welcome to Gates Institute of Technology (Gooty)
   </div>
+
+  <div class="subline">
+    CSP Project – Community Service Program
+  </div>
+
+  <!-- FIXED HEADING (YOUR REQUEST) -->
+  <div class="title-box">
+
+    <div class="title health">Health & Hygiene</div>
+
+    <div class="title sanitization">Sanitization & Hygiene Education</div>
+
+  </div>
+
 </div>
 
 <!-- INTRO -->
@@ -98,7 +127,7 @@ button:hover {
   </p>
 </div>
 
-<!-- YOUR SANITIZATION CONTENT (CONTINUED PAGE DATA) -->
+<!-- SANITIZATION CONTENT -->
 <div class="card">
   <h3>🧼 Meaning of Sanitization</h3>
 
@@ -124,8 +153,8 @@ button:hover {
   <ul style="text-align:left; margin-left:20%;">
     <li>Prevents spread of diseases</li>
     <li>Keeps environment clean</li>
-    <li>Protects health of people</li>
-    <li>Improves hygiene awareness in society</li>
+    <li>Protects human health</li>
+    <li>Improves hygiene awareness</li>
   </ul>
 </div>
 
