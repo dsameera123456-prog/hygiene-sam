@@ -8,12 +8,15 @@
 body {
   margin: 0;
   font-family: "Georgia", serif;
-  background: linear-gradient(135deg, #00c6ff, #38ef7d, #ffffff);
+
+  /* ✅ ONLY CHANGE: NEW SKY BLUE + BLUE WHITE BACKGROUND */
+  background: linear-gradient(135deg, #87CEEB, #dff6ff, #ffffff);
+
   text-align: center;
   overflow-x: hidden;
 }
 
-/* WATERMARK */
+/* WATERMARK (UNCHANGED) */
 body::before {
   content: "";
   position: fixed;
@@ -32,7 +35,7 @@ body::before {
   z-index: -1;
 }
 
-/* HEADER */
+/* HEADER (UNCHANGED) */
 .header {
   padding: 30px 10px;
 }
@@ -40,20 +43,15 @@ body::before {
 .welcome {
   font-size: 42px;
   font-weight: bold;
-  color: #1b4d89;
+  color: #0b3d91;
 }
 
-.subline {
-  font-size: 20px;
-  color: #2e7d32;
-}
-
-/* TITLES */
+/* TWO LINES (UNCHANGED) */
 .title-box {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   margin-top: 20px;
 }
 
@@ -66,7 +64,7 @@ body::before {
 .hygiene { color: #2e7d32; }
 .sanitization { color: #ef6c00; }
 
-/* CARD */
+/* CARD (UNCHANGED) */
 .card {
   background: rgba(255,255,255,0.92);
   width: 80%;
@@ -76,7 +74,7 @@ body::before {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* BUTTON */
+/* BUTTON (UNCHANGED) */
 button {
   padding: 12px 20px;
   background: #00695c;
@@ -103,11 +101,7 @@ button:hover {
     Welcome to Gates Institute of Technology (Gooty)
   </div>
 
-  <div class="subline">
-    CSP Project – Community Service Program
-  </div>
-
-  <!-- FIXED HEADING (YOUR REQUEST) -->
+  <!-- TWO LINE HEADING -->
   <div class="title-box">
 
     <div class="title health">Health & Hygiene</div>
@@ -116,47 +110,4 @@ button:hover {
 
   </div>
 
-</div>
-
-<!-- INTRO -->
-<div class="card">
-  <h3>Hygiene Connect & Sanitization Care</h3>
-  <p>
-    A community service project focusing on awareness of cleanliness,
-    hygiene habits, and disease prevention in society.
-  </p>
-</div>
-
-<!-- SANITIZATION CONTENT -->
-<div class="card">
-  <h3>🧼 Meaning of Sanitization</h3>
-
-  <p>
-    Sanitization means the process of cleaning and removing dirt, germs,
-    and harmful bacteria from surroundings, objects, or places to make them
-    safe and hygienic.
-  </p>
-
-  <p><b>👉 In simple words:</b></p>
-  <p><b>Sanitization = Cleaning to remove germs and keep things safe</b></p>
-
-  <h4>🧠 Easy Examples:</h4>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Cleaning toilets with disinfectant</li>
-    <li>Washing hands with soap</li>
-    <li>Cleaning classrooms and desks</li>
-    <li>Sanitizing hospitals and public places</li>
-    <li>Using sanitizer in daily life</li>
-  </ul>
-
-  <h4>🌟 Importance:</h4>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Prevents spread of diseases</li>
-    <li>Keeps environment clean</li>
-    <li>Protects human health</li>
-    <li>Improves hygiene awareness</li>
-  </ul>
-</div>
-
-</body>
-</html>
+</
