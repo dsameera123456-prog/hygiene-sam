@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, orange, red, yellow);
+  color: black;
+}
+
+/* Header box */
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* Paragraph box */
+p {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px;
+}
+
+/* Login button */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Button hover */
+button:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Main box styling */
+body {
+  padding: 10px;
+}
+
+/* Simple center alignment */
+center {
+  text-align: center;
+}
