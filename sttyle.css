@@ -1,23 +1,27 @@
 body {
   margin: 0;
+  padding: 10px;
   font-family: Arial, sans-serif;
+
+  /* Background */
   background: linear-gradient(135deg, orange, red, yellow);
+
   color: black;
 }
 
-/* Header box */
+/* Headings */
 h1, h2, h3 {
   text-align: center;
 }
 
-/* Paragraph box */
+/* Paragraph */
 p {
   text-align: center;
   font-size: 18px;
   margin: 20px;
 }
 
-/* Login button */
+/* Button */
 button {
   display: block;
   margin: 20px auto;
@@ -27,6 +31,7 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 /* Button hover */
@@ -36,12 +41,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Main box styling */
-body {
-  padding: 10px;
-}
-
-/* Simple center alignment */
+/* Center tag (optional old HTML support) */
 center {
   text-align: center;
 }
