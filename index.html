@@ -9,14 +9,14 @@ body {
   margin: 0;
   font-family: "Georgia", serif;
 
-  /* 💜 SAME BACKGROUND (NO CHANGE) */
+  /* 💜 PURPLE THEME (UNCHANGED) */
   background: linear-gradient(135deg, #e6ccff, #7b2cbf, #3c096c);
 
   text-align: center;
   overflow-x: hidden;
 }
 
-/* WATERMARK (UNCHANGED) */
+/* WATERMARK */
 body::before {
   content: "";
   position: fixed;
@@ -40,27 +40,23 @@ body::before {
   padding: 30px 10px;
 }
 
-/* SMALL LINES */
 .line {
   color: #ffffff;
   font-size: 20px;
   margin: 5px 0;
 }
 
-/* MAIN TITLE (VERY BIG + DARK PURPLE) */
 .main-title {
   font-size: 44px;
   font-weight: bold;
-  color: #2d0057; /* dark purple */
+  color: #2d0057;
   margin: 15px 0;
 }
 
-/* SUB TITLE */
 .sub-title {
   font-size: 26px;
   font-weight: bold;
   color: #ffffff;
-  margin-top: 10px;
 }
 
 /* CARD */
@@ -72,6 +68,49 @@ body::before {
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+
+/* LIST ALIGN */
+ul {
+  text-align: left;
+  margin-left: 20%;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 20px;
+  background: #5a189a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3c096c;
+  transform: scale(1.05);
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
 </style>
 </head>
 
@@ -80,21 +119,15 @@ body::before {
 <!-- HEADER -->
 <div class="header">
 
-  <!-- LINE 1 -->
   <div class="line">Welcome</div>
-
-  <!-- LINE 2 -->
   <div class="line">Gates Institute of Technology (Gooty)</div>
 
-  <!-- MAIN CSP TITLE -->
   <div class="main-title">CSP Project of Health and Hygiene</div>
-
-  <!-- SUB TITLE -->
   <div class="sub-title">Sanitization & Hygiene Education</div>
 
 </div>
 
-<!-- CONTENT -->
+<!-- INTRO -->
 <div class="card">
   <h3>Hygiene Connect & Sanitization Care</h3>
   <p>
@@ -103,170 +136,71 @@ body::before {
   </p>
 </div>
 
-</body>
-</html>
-<!-- NEXT PAGE: AWARENESS & GUIDELINES -->
+<!-- CONTENT SECTIONS -->
+
 <div class="card">
-
-  <h3>🧠 Awareness & Guidelines</h3>
-
-  <p><b>Hygiene means maintaining cleanliness to prevent diseases.</b></p>
-
-  <h4>✔ Do’s</h4>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Wash hands before eating food</li>
-    <li>Use soap or sanitizer regularly</li>
-    <li>Keep surroundings clean</li>
-    <li>Dispose waste in dustbins only</li>
-    <li>Wear clean clothes daily</li>
-  </ul>
-
-  <h4>❌ Don’ts</h4>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Do not throw waste in open areas</li>
-    <li>Do not touch face with dirty hands</li>
-    <li>Do not ignore personal hygiene</li>
-    <li>Do not share personal items like towels</li>
-  </ul>
-
+<h3>🧼 About Sanitization</h3>
+<p>Sanitization removes germs and keeps surroundings safe and clean.</p>
 </div>
 
-<!-- ABOUT SANITIZATION -->
 <div class="card">
-  <h3>🧼 About Sanitization</h3>
-  <p>
-    Sanitization is the process of removing germs, dirt, and harmful bacteria
-    from surfaces, objects, and environment to maintain safety and hygiene.
-  </p>
+<h3>🧴 About Hygiene</h3>
+<p>Hygiene means maintaining cleanliness to prevent diseases.</p>
 </div>
 
-<!-- ABOUT HYGIENE -->
 <div class="card">
-  <h3>🧴 About Hygiene</h3>
-  <p>
-    Hygiene means maintaining cleanliness in daily life to prevent diseases
-    and keep ourselves healthy physically and mentally.
-  </p>
+<h3>🚿 Personal Hygiene</h3>
+<ul>
+<li>Bathing daily</li>
+<li>Brushing teeth twice</li>
+<li>Washing hands regularly</li>
+<li>Wearing clean clothes</li>
+</ul>
 </div>
 
-<!-- PERSONAL HYGIENE -->
 <div class="card">
-  <h3>🚿 Personal Hygiene</h3>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Bathing daily</li>
-    <li>Brushing teeth twice a day</li>
-    <li>Washing hands regularly</li>
-    <li>Wearing clean clothes</li>
-  </ul>
+<h3>🌸 Menstrual Hygiene</h3>
+<p>Proper use of sanitary pads and cleanliness during menstruation.</p>
 </div>
 
-<!-- MENSTRUAL HYGIENE -->
 <div class="card">
-  <h3>🌸 Menstrual Hygiene</h3>
-  <p>
-    Maintaining cleanliness during menstruation using sanitary pads,
-    proper disposal, and regular washing is very important for health and safety.
-  </p>
+<h3>💡 Caring Tips</h3>
+<ul>
+<li>Drink clean water</li>
+<li>Keep environment clean</li>
+<li>Avoid dirty hands on face</li>
+</ul>
 </div>
 
-<!-- HOW TO BE SANITIZED -->
 <div class="card">
-  <h3>🧼 How to Be Sanitized</h3>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Wash hands with soap for 20 seconds</li>
-    <li>Use sanitizer before eating or after touching surfaces</li>
-    <li>Clean frequently touched objects</li>
-    <li>Keep surroundings clean and dry</li>
-  </ul>
+<h3>📸 Demo Image Process</h3>
+<p>Hand washing, sanitizing, cleaning surfaces, waste disposal.</p>
 </div>
 
-<!-- HOW TO CHECK HYGIENE -->
 <div class="card">
-  <h3>🔍 How to Check Hygiene</h3>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Check cleanliness of hands and nails</li>
-    <li>Check surroundings (no waste or smell)</li>
-    <li>Check water quality and cleanliness</li>
-    <li>Ensure personal cleanliness habits</li>
-  </ul>
+<h3>🏆 Our Work</h3>
+<p>Awareness programs and hygiene activities conducted by our team.</p>
 </div>
 
-<!-- CARING TIPS -->
 <div class="card">
-  <h3>💡 Caring Tips</h3>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Drink clean and safe water</li>
-    <li>Maintain daily hygiene routine</li>
-    <li>Avoid touching face with dirty hands</li>
-    <li>Keep environment clean</li>
-  </ul>
+<h3>📊 Outcome</h3>
+<ul>
+<li>Improved hygiene awareness</li>
+<li>Reduced disease spread</li>
+<li>Better cleanliness habits</li>
+</ul>
 </div>
 
-<!-- DEMO IMAGE PROCESS -->
 <div class="card">
-  <h3>📸 Demo Image Process</h3>
-  <p>
-    1. Cleaning hands with soap<br>
-    2. Using sanitizer on hands<br>
-    3. Cleaning classroom surfaces<br>
-    4. Proper waste disposal in dustbins
-  </p>
+<h3>🎯 Project Aim</h3>
+<p>To spread awareness about hygiene and sanitization.</p>
 </div>
 
-<!-- OUR WORK -->
 <div class="card">
-  <h3>🏆 Our Work</h3>
-  <p>
-    We created awareness programs, cleaned surroundings,
-    and educated people about hygiene importance.
-  </p>
+<h3>📈 Project Result</h3>
+<p>Successfully improved hygiene awareness in community.</p>
 </div>
 
-<!-- OUTCOME -->
-<div class="card">
-  <h3>📊 Outcome</h3>
-  <ul style="text-align:left; margin-left:20%;">
-    <li>Increased hygiene awareness</li>
-    <li>Improved cleanliness habits</li>
-    <li>Reduced risk of diseases</li>
-  </ul>
-</div>
-
-<!-- PROJECT AIM -->
-<div class="card">
-  <h3>🎯 Project Aim</h3>
-  <p>
-    To spread awareness about hygiene and sanitization
-    among students and community people.
-  </p>
-</div>
-
-<!-- PROJECT RESULT -->
-<div class="card">
-  <h3>📈 Project Result</h3>
-  <p>
-    The project successfully created awareness about cleanliness
-    and improved hygiene practices in daily life.
-  </p>
-</div>  
 <!-- IMAGE GALLERY -->
 <div class="card">
-    <h3>📸 Image Gallery</h3>
-    <p>Awareness Activities, Sanitization Drives, and Community Service Work</p>
-
-    <div class="gallery">
-
-        <img src="images/work1.jpg" alt="Awareness Program">
-
-        <img src="images/work2.jpg" alt="Hand Washing Awareness">
-
-        <img src="images/work3.jpg" alt="Community Interaction">
-
-        <img src="images/work4.jpg" alt="Sanitization Activity">
-
-        <img src="images/work5.jpg" alt="Health Awareness Session">
-
-        <img src="images/work6.jpg" alt="Student Participation">
-
-    </div>
-</div>
+    <h3>📸 Image Gallery</h3
